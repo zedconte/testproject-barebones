@@ -53,6 +53,14 @@ For reference please check how to create a [Incoming Webhook](https://api.slack.
 
 Navigate to [TestProject Integrations](https://app.testproject.io/#/integrations/sdk) and copy or generate a new developer token. Copy the value and substitute in Project Root's **docker-compose.yaml** TP_API_KEY.
 
+## Test Scenarios
+
+### Screenshots
+
+![ScreenShot](/screenshots/sample.png)
+
+## Execution
+
 ### TestProject Agent
 
 Run TestProject Agent locally.
