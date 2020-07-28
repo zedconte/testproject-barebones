@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/zedconte/testproject-challenge.svg?branch=travis)](https://travis-ci.org/zedconte/testproject-challenge)
+
 # testproject-challenge
 
 This repository contains code examples for creating a [TestProject](https://testproject.io/) automation framework targeting Automation Practice site http://automationpractice.com/index.php
