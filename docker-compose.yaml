@@ -22,8 +22,8 @@ services:
   chrome:
     image: selenium/standalone-chrome
     volumes:
-      - "C:/chrome:/dev/shm"
+      - "/dev/shm:/dev/shm"
   firefox:
     image: selenium/standalone-firefox
     volumes:
-      - "c:/firefox:/dev/shm"
+      - "/dev/shm:/dev/shm"
