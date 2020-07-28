@@ -61,19 +61,22 @@ Navigate to [TestProject Integrations](https://app.testproject.io/#/integrations
 
 For implementation details review on **src/main/tests/AutomationPracticeTest.java**
 
-Scenario: Register to Automation Practice website
-  Given I am on Home Page
-  When I click Sign In
-  Then I see Create Account Page
-  And I fill in "Email" with "<random_email>" for new account
-  And I press "Create an account"
-  Then I should be on the Create Account Page
-  When I fill account details and submit
-  Then I should be on Account Page
-  And Account name should be "Mark Whalberg"
-  And Title should be "My account - My Store"
-  When I click Sign Out
-  Then I should see Create Account Page
+```gherkin
+Feature: AutomationPracticeTest
+    Scenario: Register to Automation Practice website
+        Given I am on Home Page
+        When I click Sign In
+        Then I see Create Account Page
+        And I fill in "Email" with "<random_email>" for new account
+        And I press "Create an account"
+        Then I should be on the Create Account Page
+        When I fill account details and submit
+        Then I should be on Account Page
+        And Account name should be "Mark Whalberg"
+        And Title should be "My account - My Store"
+        When I click Sign Out
+        Then I should see Create Account Page
+```
 
 ### Home
 ![ScreenShot](/screenshots/home.png)
