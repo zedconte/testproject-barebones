@@ -2,7 +2,7 @@
 # To execute this docker-compose, store it in a file (e.g. testproject-agent.yaml) an run:
 # docker-compose -f <file_name> up -d
 
-version: "3.1"
+version: "2.0"
 services:
   testproject-persistent:
     image: testproject/agent:0.63.0
