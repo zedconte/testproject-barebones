@@ -7,6 +7,9 @@
     <groupId>io.testproject</groupId>
     <artifactId>automation-practice-test</artifactId>
     <version>1.1</version>
+    <packaging>jar</packaging>
+    <name>automation-practice-test</name>
+    <url>https://github.com/zedconte/testproject-challenge</url>
 
     <properties>
         <tp.sdk.path>${project.basedir}/io.testproject.sdk.java.jar</tp.sdk.path>
@@ -105,7 +108,16 @@
             <version>${shutterbug}</version>
         </dependency>
     </dependencies>
-
+    <distributionManagement>
+        <repository>
+          <id>packagecloud-travis</id>
+          <url>packagecloud+https://packagecloud.io/zedconte/testproject-challange</url>
+        </repository>
+        <snapshotRepository>
+          <id>packagecloud-travis</id>
+          <url>packagecloud+https://packagecloud.io/zedconte/testproject-challange</url>
+        </snapshotRepository>
+      </distributionManagement>
     <build>
         <sourceDirectory>src</sourceDirectory>
         <testSourceDirectory>src/test/io/testproject/tests/desktop</testSourceDirectory>
@@ -206,5 +218,12 @@
                 <version>3.0.0</version>
             </plugin>
         </plugins>
+        <extensions>
+            <extension>
+              <groupId>io.packagecloud.maven.wagon</groupId>
+              <artifactId>maven-packagecloud-wagon</artifactId>
+              <version>0.0.4</version>
+            </extension>
+          </extensions>
     </build>
 </project>
