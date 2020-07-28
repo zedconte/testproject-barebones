@@ -1,8 +1,24 @@
+/*
+ * testproject-challenge
+ * Copyright (C) 2020  Raul Ortega
+ *
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package test.io.testproject.tests.desktop;
 
-import com.assertthat.selenium_shutterbug.core.Shutterbug;
-import com.assertthat.selenium_shutterbug.utils.web.ScrollStrategy;
-import io.qameta.allure.Attachment;
 import io.testproject.java.enums.AutomatedBrowserType;
 import io.testproject.java.sdk.v2.Runner;
 import main.java.io.testproject.tests.Actions;
@@ -16,9 +32,6 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import test.io.testproject.tests.Tests;
 import test.util.AfterEachExtension;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import static main.java.io.testproject.Configuration.DEV_TOKEN;
