@@ -13,7 +13,7 @@ services:
     ports:
       - "8585:8585"
     volumes:
-      - "C:/var:/var/testproject/agent"
+      - "/var/testproject/agent:/var/testproject/agent"
     environment:
       TP_API_KEY: "wLOnxHCr2EXJpZGoePcNbCS_DWbxbThnm52JN4T3ZJY1"
       TP_AGENT_ALIAS: "Docker Persistent"
