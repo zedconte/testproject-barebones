@@ -45,6 +45,8 @@ To run the project you need to install and run Docker Desktop from [Docker](http
 
 In IntelliJ or your favorite IDE create a new JUnit configuration with Package **test.io.testproject.tests.desktop** and classpath of module **automation-practice-test**.
 
+![ScreenShot](/screenshots/intellij-debug-config.png)
+
 ### Slack Webhooks
 
 For reference please check how to create a [Incoming Webhook](https://api.slack.com/messaging/webhooks). When the url is created substitute in testdata/automationpractice.properties
@@ -55,9 +57,47 @@ Navigate to [TestProject Integrations](https://app.testproject.io/#/integrations
 
 ## Test Scenarios
 
-### Screenshots
+## Feature
 
-![ScreenShot](/screenshots/sample.png)
+For implementation details review on **src/main/tests/AutomationPracticeTest.java**
+
+Scenario: Register to Automation Practice website
+  Given I am on Home Page
+  When I click Sign In
+  Then I see Create Account Page
+  And I fill in "Email" with "<random_email>" for new account
+  And I press "Create an account"
+  Then I should be on the Create Account Page
+  When I fill account details and submit
+  Then I should be on Account Page
+  And Account name should be "Mark Whalberg"
+  And Title should be "My account - My Store"
+  When I click Sign Out
+  Then I should see Create Account Page
+
+### Home
+![ScreenShot](/screenshots/home.png)
+
+### Sign up
+![ScreenShot](/screenshots/sign-up.png)
+
+### Fill in details
+![ScreenShot](/screenshots/create-account.png)
+
+### Fill in details (2)
+![ScreenShot](/screenshots/create-account-submit.png)
+
+### Assert Account Page
+![ScreenShot](/screenshots/assert-account-and-signout.png)
+
+### Logout confirmation
+![ScreenShot](/screenshots/logout-confirmation.png)
+
+### Slack Notification
+![ScreenShot](/screenshots/slack-notification.png)
+
+### Slack Mobile
+![ScreenShot](/screenshots/slack-mobile.png)
 
 ## Execution
 
