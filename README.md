@@ -1,4 +1,4 @@
-# testproject-challenge
+# testproject-barebones
 
 This repository contains code examples for creating a [TestProject](https://testproject.io/) automation framework targeting Automation Practice site http://automationpractice.com/index.php
 
