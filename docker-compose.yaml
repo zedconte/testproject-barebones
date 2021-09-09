@@ -5,7 +5,7 @@
 version: "3.1"
 services:
   testproject-persistent:
-    image: testproject/agent:0.63.0
+    image: testproject/agent:3.2.0
     container_name: testproject-persistent
     depends_on:
       - chrome
@@ -13,17 +13,17 @@ services:
     ports:
       - "8585:8585"
     volumes:
-      - "C:/var:/var/testproject/agent"
+      - "/var:/var/testproject/agent"
     environment:
-      TP_API_KEY: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      TP_API_KEY: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
       TP_AGENT_ALIAS: "Docker Persistent"
       CHROME: "chrome:4444"
       FIREFOX: "firefox:4444"
   chrome:
     image: selenium/standalone-chrome
     volumes:
-      - "C:/chrome:/dev/shm"
+      - "/var/chrome:/dev/shm"
   firefox:
     image: selenium/standalone-firefox
     volumes:
-      - "c:/firefox:/dev/shm"
+      - "/var/firefox:/dev/shm"
